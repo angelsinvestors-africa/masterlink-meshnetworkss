@@ -2,7 +2,7 @@ const sqlite3 = require('better-sqlite3');
 const path = require('path');
 
 const dbPath = path.resolve(__dirname, 'meshnetworks.db');
-const db = new sqlite3.Database(dbPath, (err) => {
+const db = new sqlite3(dbPath, (err) => {
   if (err) {
     console.error("Error opening database:", err.message);
   } else {

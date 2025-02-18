@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const paymentRoutes = require('./routes/payment');
-const PORT = process.env.PORT || 3000;
+
+// Badilisha PORT kuwa APP_PORT
+const PORT = process.env.APP_PORT || 3000;
 
 app.use('/api/payment', paymentRoutes);
 
